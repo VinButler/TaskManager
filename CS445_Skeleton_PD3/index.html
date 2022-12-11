@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    
+    <title>Title: PyScript</title>
+</head>
+<body>
+    <py-env>
+         - paths:
+          - /func.py
+          - /objects.py
+          - /events.json
+          - /logins.json
+    </py-env>
+	<py-script> 
+from func import *
+print("Welcome to Weekly Planner")
+print("What would you like to do?")
+print("(Sign up) or (Log in)")
+task = input("->").lower()
+
+while(True):
+    if task == "sign up":
+        uid = signupButton()
+        break
+    elif task == "log in":
+        uid = loginButton()
+        break
+    else:
+        print("Not an option, please try again")
+        task = input("->").lower()
+
+while(True):
+    print("Would you like to create an event, delete an event, or view all events?")
+    print("(Create) (Delete) (View All) (View One) (Exit)")
+    task = input("->").lower()
+    if task == "create":
+        createEventButton(uid)
+    elif task == "delete":
+        deleteEventButton(uid)
+    elif task == "view all":
+        viewAllEvents(uid)
+    elif task == "view one":
+        viewEventButton(uid)
+    elif task == "exit":
+        break
+    else:
+        print("Not an option, please try again")
+
+print("Success?") 
+    </py-script>
+</body>
+</html>

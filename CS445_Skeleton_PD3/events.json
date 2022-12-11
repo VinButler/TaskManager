@@ -1,0 +1,17 @@
+{
+    "users": [
+        {
+            "userID": 0,
+            "events": [
+                {
+                    "eventID": 1,
+                    "name": "sample case",
+                    "day": "today",
+                    "time": "12:00",
+                    "duration": "1",
+                    "description": "Lorem ipsum dolor sit amet, pertinacia intellegam sea ad, in atqui fierent maluisset vix."
+                }
+            ]
+        }
+    ]
+}
